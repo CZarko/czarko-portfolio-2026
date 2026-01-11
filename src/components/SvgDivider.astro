@@ -1,0 +1,11 @@
+---
+const { flip = false } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 1440 120"
+  preserveAspectRatio="none"
+  class={`w-full h-24 fill-zinc-950 ${flip ? "rotate-180" : ""}`}
+>
+  <path d="M0,64L120,74.7C240,85,480,107,720,96C960,85,1200,43,1320,21.3L1440,0L1440,0L1320,0L1200,0L960,0L720,0L480,0L240,0L120,0L0,0Z" />
+</svg>

@@ -1,16 +1,47 @@
 ---
-
+import VinylProject from "../components/VinylProject.astro";
+import SvgDivider from "../components/SvgDivider.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<BaseLayout>
+	 <!-- HERO -->
+  <section class="section min-h-screen flex items-center">
+    <h1 class="text-6xl md:text-8xl font-black">
+      Caleb<br />Zarko
+    </h1>
+  </section>
+
+  <SvgDivider />
+
+  <!-- ABOUT -->
+  <section id="about" class="section bg-zinc-900">
+    <SectionHeader title="About" />
+    <p class="max-w-2xl ml-auto text-right">
+      Creative developer focused on design-driven experiences.
+    </p>
+  </section>
+
+  <SvgDivider flip />
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section bg-zinc-950">
+    <SectionHeader title="Projects" />
+
+    <div class="flex flex-wrap justify-end gap-16">
+      <VinylProject title="Project One" />
+      <VinylProject title="Project Two" />
+      <VinylProject title="Project Three" />
+    </div>
+  </section>
+
+  <SvgDivider />
+
+  <!-- CONTACT -->
+  <section id="contact" class="section bg-zinc-900">
+    <SectionHeader title="Contact" />
+    <p class="text-right">hello@email.com</p>
+  </section>
+</BaseLayout>
